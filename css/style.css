@@ -1,4 +1,5 @@
 /* General Styles */
+/* Base styles for body, text, and sections */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -10,23 +11,68 @@ body {
     padding: 60px 20px;
 }
 
-.text-orange {
+.title {
     color: #ff8700;
+    font-size: 2rem;
 }
 
+/* Text Colors */
+.text-orange {
+    color: #ff8700; /* McLaren orange */
+}
+
+/* Background Colors */
 .bg-black {
-    background-color: #000000;
+    background-color: #000000; /* Solid black background */
 }
 
 .bg-orange {
-    background-color: #ff8700;
+    background-color: #ff8700; /* Orange background for highlights */
 }
 
-/*Skills/ProgressBAR*/
+/* ------------------------------------------- */
+
+/* Dynamic Text Styling */
+/* Dynamic Text Styling */
+#dynamicText {
+    font-size: 1rem; /* Large, professional text size */
+    font-weight: bold; /* Emphasize the text */
+    color: #ff8700; /* McLaren orange */
+    text-transform: uppercase; /* Professional, bold appearance */
+    text-align: center;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out; /* Smooth animations */
+    display: inline-block; /* Required for transform effects */
+}
+
+/* Flash Out Animation (Fade and Scale Down) */
+.flash-out {
+    opacity: 0;
+    transform: scale(0.8); /* Shrinks slightly while fading out */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Flash In Animation (Brighten and Scale Up) */
+.flash-in {
+    opacity: 1;
+    transform: scale(1.2); /* Pops in slightly larger */
+    text-shadow: 0 0 20px #ff8700, 0 0 40px #e06d00; /* Bold glowing effect */
+    transition: transform 0.4s ease, opacity 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Subtle Glow Persisting After Flash */
+.flash-in.glow {
+    text-shadow: 0 0 10px #ff8700, 0 0 20px #e06d00; /* Softer glow persists */
+}
+
+
+
+/* Skills Section / Progress Bars */
+/* Progress Bar Container */
 .progress-container {
     margin-bottom: 20px;
 }
 
+/* Progress Bar Title */
 .progress-title {
     display: block;
     margin-bottom: 5px;
@@ -36,111 +82,192 @@ body {
 }
 
 /* Progress Bar Styling */
-
-/* Progress Container */
 .progress {
-    height: 10px; /* Adjust for desired height */
+    height: 10px; /* Bar height */
     background-color: #333333; /* Dark gray background */
     border-radius: 9px; /* Smooth rounded edges */
-    overflow: hidden; /* Ensure the progress bar stays inside */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    box-shadow: none; /* Remove any box-shadow */
-    position: relative; /* Ensure proper alignment */
+    overflow: hidden; /* Keeps bar inside container */
+    position: relative;
 }
 
-/* Progress Bar */
 .progress-bar {
-    height: 100%; /* Full height of the container */
-    background: linear-gradient(90deg, #ff8700, #e06d00); /* Gradient effect */
-    width: 0; /* Start from 0 for animation */
-    transition: width 1s ease-in-out; /* Smooth fill animation */
-    border-radius: 10px; /* Match the container's rounded edges */
-    box-shadow: none; /* Remove any shadow */
-    margin: 0; /* Remove default margin */
+    height: 100%; /* Full height of the bar */
+    width: 0; /* Start with zero for animation */
+    background: linear-gradient(90deg, #ff8700, #e06d00); /* Gradient fill */
+    border-radius: 10px; /* Rounded edges */
+    transition: width 1s ease-in-out; /* Smooth animation on load */
 }
 
-/* Hover Effect */
+/* Hover Effects for Progress Bar */
 .progress-container:hover .progress-bar {
-    background: linear-gradient(90deg, #e06d00, #ff8700);
-    box-shadow: 0 0 10px #ff8700, 0 0 20px #e06d00;
+    background: linear-gradient(90deg, #e06d00, #ff8700); /* Reversed gradient */
+    box-shadow: 0 0 10px #ff8700, 0 0 20px #e06d00; /* Glowing effect */
 }
 
-
-/* Hero Section */
+/* ------------------------------------------- */
+/* Hero Section Styling */
 .hero-section {
-    background: linear-gradient(180deg, #000000, #111111); /* Gradient background */
+    background: linear-gradient(180deg, #000000, #111111); /* Subtle gradient */
     padding: 100px 20px;
     color: #ffffff;
+    text-align: center; /* Center-align all content */
+}
+
+/* Hero Container for Image and Text */
+.hero-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align image and text */
 }
 
 .hero-title {
     font-size: 3rem;
-    color: #ff8700;
+    color: #ff8700; /* Highlighted in orange */
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    animation: fadeIn 3s infinite alternate;
+    font-size: 2rem; /* Adjust for better visibility */
+    font-weight: bold; /* Emphasize the text */
+    color: #ff8700; /* McLaren orange */
+    text-transform: uppercase; /* Professional, bold appearance */
+    margin-top: 10px; /* Space between text and photo */
+    text-shadow: 0 0 10px #ff8700, 0 0 20px #e06d00; /* Glowing effect */
+    animation: fadeIn 3s infinite alternate; /* Subtle animation */
 }
 
-
-/* Profile Photo */
+/* ------------------------------------------- */
+/* Profile Photo Styling */
 .profile-photo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px; /* Circular photo size */
     height: 150px;
-    border-radius: 50%; /* Makes the image circular */
-    border: 3px solid #ff8700; /* McLaren orange border */
-    box-shadow: 0 0 15px rgba(255, 135, 0, 0.5); /* Subtle glow effect */
-    margin: 20px 0; /* Space between title and subtitle */
-    object-fit: cover; /* Ensures the image scales properly */
+    border-radius: 50%; /* Circular shape */
+    border: 3px solid #ff8700; /* Orange border */
+    box-shadow: 0 0 15px rgba(255, 135, 0, 0.5); /* Glowing effect */
+    margin-bottom: 20px; /* Space between image and text */
+    object-fit: cover; /* Ensures image scales properly */
     transition: transform 0.3s ease-in-out; /* Adds hover animation */
 }
+
 .profile-photo:hover {
     transform: scale(1.1); /* Slight zoom on hover */
-    box-shadow: 0 0 25px rgba(255, 135, 0, 0.7);
+    box-shadow: 0 0 25px rgba(255, 135, 0, 0.7); /* Enhanced glow */
 }
 
-/* Portfolio Card */
+/* ------------------------------------------- */
+/* Portfolio Section */
+/* Card Styling */
 .card-portfolio {
     background: #1c1c1c; /* Dark background for contrast */
     border: none;
-    color: #ffffff;
+    color: #ffffff; /* White text */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 10px; /* Smooth edges */
 }
 
-.card-title, .card-text {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.card-title,
+.card-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
 }
 
+/* Ensure videos display correctly on all devices */
+.responsive-video {
+    width: 100%; /* Ensures it scales within its container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Prevents overflow */
+    z-index: 10; /* Places video controls above other elements */
+    pointer-events: auto; /* Ensures controls are clickable */
+    display: block; /* Fixes inline issues */
+}
+
+/* Prevent overlapping issues */
+.card-body {
+    position: relative;
+    z-index: 1; /* Keeps content below video controls */
+}
+
+/* Portfolio Video Hover Effect */
 .card-portfolio video:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom effect */
     transition: transform 0.3s ease-in-out;
 }
 
+/* Portfolio Button Styling */
 .card-portfolio .btn-orange {
-    background-color: #ff8700;
+    background-color: #ff8700; /* Orange button */
     border: none;
     color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .card-portfolio .btn-orange:hover {
-    background-color: #e06d00;
+    background-color: #e06d00; /* Darker orange on hover */
 }
 
+/* ------------------------------------------- */
 /* Social Links */
 .social-link {
-    color: #ff8700;
-    font-size: 2rem;
+    color: #ff8700; /* Orange links */
+    font-size: 2rem; /* Large icons */
     margin: 0 10px;
 }
 
 .social-link:hover {
-    color: #ffffff;
+    color: #ffffff; /* Turns white on hover */
 }
 
+/* ------------------------------------------- */
+/* Work Experience & Education Cards */
+.card {
+    background-color: #1a1a1a; /* Dark gray for cards */
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-bottom: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+.card .date {
+    font-size: 1rem; /* Smaller font for dates */
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Highlighted title size */
+    color: #ff8700; /* Orange titles */
+    margin-bottom: 15px;
+}
+
+.responsibilities {
+    list-style: none; /* Remove default bullets */
+    padding-left: 20px;
+}
+
+.responsibilities li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    position: relative; /* For custom bullets */
+    color: #dddddd; /* Light gray text */
+}
+
+.responsibilities li::before {
+    content: "•"; /* Custom bullet point */
+    color: #ff8700; /* Orange bullet */
+    position: absolute;
+    left: -20px; /* Indent bullet */
+}
+
+/* ------------------------------------------- */
+/* Responsive Adjustments */
+/* Optimizes for smaller screens */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+}
+
+/* ------------------------------------------- */
 /* Animations */
+/* Subtle fade-in effect */
 @keyframes fadeIn {
     0% {
         opacity: 0.7;
@@ -150,6 +277,7 @@ body {
     }
 }
 
+/* Progress Bar Animation */
 .progress-bar {
-    height: 10px;
+    height: 10px; /* Matches overall bar height */
 }

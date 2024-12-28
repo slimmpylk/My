@@ -11,32 +11,39 @@
 </head>
 <body>
 <!-- Header -->
-<!-- Header -->
 <header class="hero-section text-center">
-  <h1 class="hero-title">Slimmpylk's Site</h1>
-  <img src="photos/Samuli.jpg" alt="Slimmpylk's Photo" class="profile-photo">
-  <p class="hero-subtitle" id="dynamicText">Ultra Runner</p>
+  <div class="hero-container container">
+    <h1 class="hero-title">Slimmpylk's Site</h1>
+    <img src="photos/Samuli.jpg" alt="Profile Picture" class="profile-photo">
+    <p id="dynamicText" class="hero-subtitle">Embedded Device Programmer</p>
+  </div>
 </header>
 
 <!-- About Section -->
 <section id="about" class="section">
   <div class="container text-center">
-    <h2>About Me</h2>
-    <p>Hello! I'm Samuli, an ultra-runner, junior embedded device programmer, and aspiring cybersecurity specialist, from Finland.</p>
-
-    <p>In my free time, I love pushing my limits through running—it’s the perfect way to balance out all the sitting and screen time. At the same time, I’m constantly working on improving my IT skills to become a true professional. My programming journey started with my academic studies and has grown through personal projects that both challenge and inspire me.</p>
-
-
-    <p>What drives me even further is my passion for ethical hacking. I'm currently immersing myself in this dynamic field, eager to master its intricacies while continuously advancing my technical expertise.</p>
-</div>
+    <h2 class="title">About Me</h2>
+    <p>
+      Hello! I'm Samuli, an ultra-runner, junior embedded device programmer, and aspiring cybersecurity specialist from Finland.
+    </p>
+    <p>
+      In my free time, I love pushing my limits through running—it’s the perfect way to balance out all the sitting and screen time.
+      At the same time, I’m constantly working on improving my IT skills to become a true professional. My programming journey started
+      with my academic studies and has grown through personal projects that challenge and inspire me.
+    </p>
+    <p>
+      What drives me even further is my passion for ethical hacking. I'm currently immersing myself in this dynamic field, eager to master
+      its intricacies while continuously advancing my technical expertise.
+    </p>
+  </div>
 </section>
 
 <!-- Skills Section -->
 <section id="skills" class="section bg-black">
   <div class="container">
-    <h2 class="text-center text-orange">Skills</h2>
+    <h2 class="text-center title">Skills</h2>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-6 col-md-12">
         <div class="progress-container" data-skill="90">
           <span class="progress-title">Office 365</span>
           <div class="progress">
@@ -62,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6 col-md-12">
         <div class="progress-container" data-skill="75">
           <span class="progress-title">Python</span>
           <div class="progress">
@@ -86,17 +93,16 @@
   </div>
 </section>
 
-
-
 <!-- Portfolio Section -->
 <section id="portfolio" class="section">
   <div class="container">
-    <h2 class="text-center">Portfolio</h2>
+    <h2 class="text-center title">Portfolio</h2>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-6 col-md-12">
         <div class="card card-portfolio">
-          <video class="card-img-top" controls>
+          <video class="card-img-top responsive-video" controls>
             <source src="videos/ServoKaappi.mp4" type="video/mp4">
+            Your browser does not support the video tag.
           </video>
           <div class="card-body">
             <h5 class="card-title">Arduino Servo Safe</h5>
@@ -105,7 +111,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6 col-md-12">
         <div class="card card-portfolio">
           <video class="card-img-top" controls>
             <source src="videos/MineSweeperData.mp4" type="video/mp4">
@@ -120,6 +126,130 @@
     </div>
   </div>
 </section>
+
+
+<div class="section" id="experience">
+  <div class="container cc-experience">
+    <h2 class="text-center mb-4 title">Work Experience</h2>
+    <!-- Customer Service Supervisor -->
+    <div class="card mb-4 shadow-lg">
+      <div class="row g-0">
+        <div class="col-md-3 bg-orange text-white d-flex align-items-center justify-content-center">
+          <div class="card-body text-center">
+            <p class="date">07/2017 - 12/2021</p>
+            <h5>Security Officer (customer service)</h5>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h5 class="card-title">5 Years of Excellence</h5>
+            <ul class="responsibilities">
+              <li>Patrolled commercial properties for safety.</li>
+              <li>Ensured a safe and welcoming environment in commercial properties.</li>
+              <li>Provided exceptional customer service to tenants and visitors.</li>
+              <li>Proactively managed and maintained security systems.</li>
+              <li>Prepared detailed reports to enhance operations and processes.</li>
+              <li>Responded to customer concerns with professionalism and efficiency.</li>
+              <li>Enforced security policies effectively.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Service Chauffeur -->
+    <div class="card shadow-lg">
+      <div class="row g-0">
+        <div class="col-md-3 bg-orange text-white d-flex align-items-center justify-content-center">
+          <div class="card-body text-center">
+            <p class="date">09/2018 - 03/2019</p>
+            <h5>Customer Service Chauffeur</h5>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h5 class="card-title">Driver for the Finnish Armored Brigade</h5>
+            <p>
+              Transported high-ranking officials, including an Armored Brigade General and politicians, across Finland with responsibilities including:
+            </p>
+            <ul class="responsibilities">
+              <li>Ensuring vehicle cleanliness and maintenance.</li>
+              <li>Providing professional service to high-profile clients.</li>
+              <li>Monitoring surroundings for safety and comfort during transit.</li>
+              <li>Maintaining detailed travel logs for seamless operations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="education">
+  <div class="container cc-education">
+    <h2 class="text-center mb-4 title">Education</h2>
+    <!-- Cybersecurity Bachelor -->
+    <div class="card mb-4 shadow-lg">
+      <div class="row g-0">
+        <div class="col-md-3 bg-orange text-white d-flex align-items-center justify-content-center">
+          <div class="card-body text-center">
+            <p class="date">2024 - Present</p>
+            <h5>Bachelor of Cybersecurity</h5>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h5 class="card-title">Specializing in Cybersecurity</h5>
+            <p>
+              Focusing on penetration testing, SOC, red teaming, and advanced security methodologies, with hands-on experience through Hack The Box.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Information Technology Bachelor -->
+    <div class="card mb-4 shadow-lg">
+      <div class="row g-0">
+        <div class="col-md-3 bg-orange text-white d-flex align-items-center justify-content-center">
+          <div class="card-body text-center">
+            <p class="date">2022 - Present</p>
+            <h5>Bachelor of Engineering</h5>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h5 class="card-title">Information Technology</h5>
+            <p>
+              Developing skills in programming and electrical engineering while engaging in collaborative projects at Oulu University of Applied Sciences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hyria Vocational School -->
+    <div class="card shadow-lg">
+      <div class="row g-0">
+        <div class="col-md-3 bg-orange text-white d-flex align-items-center justify-content-center">
+          <div class="card-body text-center">
+            <p class="date">2015 - 2018</p>
+            <h5>Hyria Vocational School</h5>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h5 class="card-title">Safety and Security</h5>
+            <p>
+              Trained in safety protocols, video monitoring, and customer interaction, including creating security protocols still in use today.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Footer -->
 <footer class="footer bg-black text-center">

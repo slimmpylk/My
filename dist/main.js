@@ -1,12 +1,26 @@
 "use strict";
-const texts = ["Embedded device programmer", "Ultra Runner", "Ethical Hacker"];
+const texts = ["Embedded Device Programmer", "Ultra Runner", "Ethical Hacker"];
 let index = 0;
 const dynamicText = document.getElementById("dynamicText");
 if (dynamicText) {
-    setInterval(() => {
-        dynamicText.textContent = texts[index];
-        index = (index + 1) % texts.length;
-    }, 2000);
+    const changeText = () => {
+        // Add the "flash-out" class for the outgoing text
+        dynamicText.classList.add("flash-out");
+        // Wait for the "flash-out" animation to finish
+        setTimeout(() => {
+            dynamicText.textContent = texts[index]; // Update the text
+            index = (index + 1) % texts.length;
+            // Replace "flash-out" with "flash-in"
+            dynamicText.classList.remove("flash-out");
+            dynamicText.classList.add("flash-in");
+            // Remove the "flash-in" class after the animation completes
+            setTimeout(() => {
+                dynamicText.classList.remove("flash-in");
+            }, 500); // Match the duration of the "flash-in" animation
+        }, 500); // Match the duration of the "flash-out" animation
+    };
+    // Call the changeText function every 2 seconds
+    setInterval(changeText, 2000);
 }
 else {
     console.error("Dynamic text element not found.");
