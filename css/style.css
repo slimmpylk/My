@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.text-orange {
+    color: #ff8700;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.bg-orange {
+    background-color: #ff8700;
+}
+
+/*Skills/ProgressBAR*/
+.progress-container {
+    margin-bottom: 20px;
+}
+
+.progress-title {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Progress Bar Styling */
+
+/* Progress Container */
+.progress {
+    height: 10px; /* Adjust for desired height */
+    background-color: #333333; /* Dark gray background */
+    border-radius: 9px; /* Smooth rounded edges */
+    overflow: hidden; /* Ensure the progress bar stays inside */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-shadow: none; /* Remove any box-shadow */
+    position: relative; /* Ensure proper alignment */
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 100%; /* Full height of the container */
+    background: linear-gradient(90deg, #ff8700, #e06d00); /* Gradient effect */
+    width: 0; /* Start from 0 for animation */
+    transition: width 1s ease-in-out; /* Smooth fill animation */
+    border-radius: 10px; /* Match the container's rounded edges */
+    box-shadow: none; /* Remove any shadow */
+    margin: 0; /* Remove default margin */
+}
+
+/* Hover Effect */
+.progress-container:hover .progress-bar {
+    background: linear-gradient(90deg, #e06d00, #ff8700);
+    box-shadow: 0 0 10px #ff8700, 0 0 20px #e06d00;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(180deg, #000000, #111111); /* Gradient background */
+    padding: 100px 20px;
+    color: #ffffff;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: #ff8700;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    animation: fadeIn 3s infinite alternate;
+}
+
+
+/* Profile Photo */
+.profile-photo {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid #ff8700; /* McLaren orange border */
+    box-shadow: 0 0 15px rgba(255, 135, 0, 0.5); /* Subtle glow effect */
+    margin: 20px 0; /* Space between title and subtitle */
+    object-fit: cover; /* Ensures the image scales properly */
+    transition: transform 0.3s ease-in-out; /* Adds hover animation */
+}
+.profile-photo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 0 25px rgba(255, 135, 0, 0.7);
+}
+
+/* Portfolio Card */
+.card-portfolio {
+    background: #1c1c1c; /* Dark background for contrast */
+    border: none;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-title, .card-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card-portfolio video:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-portfolio .btn-orange {
+    background-color: #ff8700;
+    border: none;
+    color: #ffffff;
+}
+
+.card-portfolio .btn-orange:hover {
+    background-color: #e06d00;
+}
+
+/* Social Links */
+.social-link {
+    color: #ff8700;
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+.social-link:hover {
+    color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-bar {
+    height: 10px;
+}
